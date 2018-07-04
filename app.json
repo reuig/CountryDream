@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/weToday/weToday",
+    "pages/weLocate/weLocate",
+    "pages/weAre/weAre"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarText": "xiang",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#686868",
+    "selectedColor": "#d81e06",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/weToday/weToday",
+        "iconPath": "dist/images/favorite.png",
+        "selectedIconPath": "dist/images/favorite_red.png",
+        "text": "weToday"
+      },
+      {
+        "pagePath": "pages/weLocate/weLocate",
+        "iconPath": "dist/images/compass.png",
+        "selectedIconPath": "dist/images/compass_red.png",
+        "text": "weLocate"
+      },
+      {
+        "pagePath": "pages/weAre/weAre",
+        "iconPath": "dist/images/information.png",
+        "selectedIconPath": "dist/images/information_red.png",
+        "text": "weAre"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false,
+  "enablePullDownRefresh": true
+}
