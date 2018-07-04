@@ -1,0 +1,13 @@
+<!--weAre.wxml-->
+<view class='idx-content'>
+    <view class='idx-swiper'>
+        <view   class='idx-cswp {{item.swpClass}}' 
+                wx:for="{{swiperList}}" wx:key=""
+                bindtap="swpBtn"
+                data-index="{{index}}">
+            <image src='{{item.imgsrc}}' mode='widthFix'></image>
+        </view>
+     </view>
+</view>
+
+

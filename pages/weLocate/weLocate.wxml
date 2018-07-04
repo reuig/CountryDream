@@ -1,0 +1,2 @@
+<!--weLocate.wxml-->
+<image style="width: 100%; height: 100%" src="{{src}}" bindtap="map_tap"></image>

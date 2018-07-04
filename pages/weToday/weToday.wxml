@@ -1,0 +1,33 @@
+<!--pages/weToday/weToday.wxml-->
+<view class='container'>
+  <view class="con-wrap ripple {{cardRightIn?'flipInY':''}} {{cardLeftIn?'fadeInLeft':''}}"  wx:for="{{list}}" wx:if="{{index==currentIndex}}" wx:key="{{item._id}}" >
+  <view class='card-box' bindtouchstart="touchstart" bindtouchmove="touchmove" data-index="{{index}}">
+    <image wx:if="{{item.cover}}" class="card-img" style="background-image:url('{{item.cover}}')"></image>
+    <view class='card-title'>{{item.title}}</view> 
+    <view class='card-time'>{{item.time}}</view>           
+    <view class="card-con-wrap">
+      <view class='card-con-left'>
+        <view class='card-author'>{{item.author}}</view>               
+        <view class='card-tag'>{{item.tag}}</view>
+      </view>
+      <view class='card-con-right'>
+        <view class='card-agree'  catchtap='toAgree' data-id='{{item._id}}'>
+          <image src="/dist/images/{{item.agree?'agree-a.png':'agree.png'}}" class="ripple {{item.agree?'rubberBand':''}}"></image> 
+          <text></text> 
+        </view>        
+      </view>
+    </view>
+  </view>
+  <view class='comment'>
+    <view class='comment-title'></view>
+    <block>
+      <view wx:for="{{item.comment}}" class='comment-list' wx:key="{{item.logo}}">
+        <view class='comment-con'>
+          <view class='comment-name'>{{item.name}}</view> 
+          <view class='comment-txt'>{{item.txt}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+  </view>
+</view>
